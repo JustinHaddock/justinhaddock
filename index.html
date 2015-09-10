@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mySite">
 
 <head>
-    <title>Justin Haddock</title>
+    <title>Justin's Website!</title>
     <meta name="author" content="Justin Haddock" />
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.min.js"></script>
@@ -10,43 +10,23 @@
     <link rel="stylesheet" type="text/css" href="css/style1.css" />
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-</head> 
+</head>
 
 <body>
+  <div class="main" ng-view></div>
     <div class="container">
-        <!-- Codrops top bar -->
-        <div class="codrops-top">
-            <a href="http://tympanus.net/Development/ParallaxContentSlider/">
-                <strong>&laquo; Previous Demo: </strong>Parallax Content Slider
-            </a>
-            <span class="right">
-					<a href="http://slipsum.com">Placeholder text by SAMUEL L. IPSUM</a>
-					<a href="http://www.flickr.com/photos/karrienodalo/">Images by Karrie Nodalo</a>
-                    <a href="http://tympanus.net/codrops/2012/03/23/responsive-content-navigator-with-css3/">
-                        <strong>Back to the Codrops Article</strong>
-                    </a>
-                </span>
-            <div class="clr"></div>
-        </div>
         <!--/ Codrops top bar -->
         <header>
-            <h1>Content Navigator <span>with CSS3</span></h1>
-            <h2>Responsive content navigation using CSS3 transitions and :target pseudo-class</h2>
-            <nav class="codrops-demos">
-                <a class="current-demo" href="index.html#slide-main">Refresh</a>
-            </nav>
+            <h1>Justin <span>Haddock</span></h1>
+            <h2>I'm just a programmer, man.</h2>
         </header>
-        <!--[if lte IE 9]>
-			<p style="font-size: 20px; padding: 50px;">Sorry, this only works in modern browsers...</p>
-			<![endif]-->
         <section class="cn-container">
-
             <div class="cn-slide" id="slide-main">
-                <h2>Explore this</h2>
+                <h2>I like</h2>
                 <nav>
-                    <a href="#slide-1">Philosophy</a>
-                    <a href="#slide-2">Science</a>
-                    <a href="#slide-3">Literature</a>
+                    <a href="#slide-1">Comic Books</a>
+                    <a href="#slide-2">Mortal Kombat</a>
+                    <a href="#slide-3">Longboarding</a>
                 </nav>
             </div>
 
