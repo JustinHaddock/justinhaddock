@@ -5,11 +5,10 @@ var myApp = angular.module('mySite', [
 
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-  when('/home', {
-    templateUrl: 'partials/home.html',
-    controller: 'HomeController as home'
+  when('/0', {
+    templateUrl: 'partials/main.html'
   }).
   otherwise({
-    redirectTo: '/slide-1'
+    redirectTo: '/0'
   });
 }]);
