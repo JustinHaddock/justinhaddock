@@ -13,13 +13,16 @@ var paths = {
     src: {
         js: ['js/**/*.js'],
         css: ['css/**/*.css'],
-        assets: ['assets/**/*']
+        assets: ['assets/**/*'],
+        index: 'index.html',
+        partials: 'partials/*.html'
     },
     dest: {
         js: 'index.js',
         css: 'index.css',
         dir: 'app/',
-        assets: 'app/assets/'
+        assets: 'app/assets/',
+        partials: 'app/partials/'
     }
 }
 
@@ -51,7 +54,11 @@ gulp.task('js', function() {
 
 gulp.task('assets', function () {
   gulp.src(paths.src.assets)
-    .pipe(gulp.dest(paths.dest.assets));
+    .pipe(gulp.dest(paths.dest.assets))
+  gulp.src(paths.src.index)
+    .pipe(gulp.dest(paths.dest.dir))
+  gulp.src(paths.src.partials)
+    .pipe(gulp.dest(paths.dest.partials))
 })
 
 gulp.task('default', ['js', 'css', 'assets']);
