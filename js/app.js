@@ -17,7 +17,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 	when('/1-2', {
 		templateUrl: 'partials/1/1-2.html'
 	}).
-	when('/-3', {
+	when('/1-3', {
 		templateUrl: 'partials/1/1-3.html'
 	}).
 	when('/1-4', {
