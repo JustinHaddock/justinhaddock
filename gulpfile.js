@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
-var concatCss = require('gulp-concat-css');
 var minifyCss = require('gulp-minify-css');
+var concatCss = require('gulp-concat-css');
 var uglify = require('gulp-uglify');
 
 gulp.task('default', ['compress'], function() {
