@@ -1,7 +1,7 @@
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
 var concatCss = require('gulp-concat-css');
-var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
