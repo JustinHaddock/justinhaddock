@@ -1,13 +1,57 @@
-var psychController = angular.module('psychController', []);
+angular.module('mySite')
 
-psychController.controller('HomeController', ['$scope', function($scope) {
-    $scope.view = 1;
-
-    this.setView = function(newView){
-        $scope.view = newView;
+.controller('l1Controller', function() {
+  this.sections = [
+    {
+      title: "comic books",
+      link: "l2({pNum: 1})",
+      num: "1"
     },
-
-    this.isView = function(viewNum){
-        return $scope.view == viewNum;
+    {
+      title: "programming",
+      link: "l2({pNum: 2})",
+      num: "2"
+    },
+    {
+      title: "longboarding",
+      link: "l2({pNum: 3})",
+      num: "3"
     }
-}]);
+  ];
+})
+
+.controller('l2Controller', ['$stateParams', "promiseObj", function($stateParams, promiseObj) {
+  this.sections = promiseObj.data[$stateParams.pNum];
+}])
+
+.controller('l3Controller', ['$stateParams', "promiseObj", function($stateParams, promiseObj) {
+  this.pNum = $stateParams.pNum
+  this.highLevel = promiseObj.data[$stateParams.pNum];
+  this.sections = this.highLevel[$stateParams.cNum-1];
+  console.log(this.sections)
+  this.paras = this.sections["paras"];
+  this.title = this.sections["title"];
+}])
+
+
+.directive('box', function() {
+    var Controller;
+
+    Controller = function() {
+      var j = this.boxTitle;
+      //use j
+    };
+
+    return {
+        restrict: "E",
+        controller: Controller,
+        controllerAs: 'box',
+        scope: true,
+        bindToController: {
+          title: "=boxTitle",
+          num: "=boxNum",
+          link: "=boxLink"
+        },
+        templateUrl: "partials/box.html"
+    }
+});
