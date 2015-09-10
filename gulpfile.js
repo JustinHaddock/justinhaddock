@@ -18,7 +18,7 @@ gulp.task('default', ['compress'], function() {
     .pipe(minifyCss({compatibility: 'ie8',keepSpecialComments: 0,keepBreaks: true}))
     .pipe(gulp.dest('out/'));
 });
-
+   
 gulp.task('compress', function() {
   return gulp.src('js/*.js')
     .pipe(uglify())
