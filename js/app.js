@@ -8,6 +8,15 @@ myApp.config(['$routeProvider', function($routeProvider) {
   when('/home', {
     templateUrl: 'partials/main.html'
   }).
+	when('/1', {
+		templateUrl: 'partials/1/1.html'
+	}).
+	when('/2', {
+		templateUrl: 'partials/2/2.html'
+	}).
+	when('/3', {
+		templateUrl: 'partials/3/3.html'
+	}).
   otherwise({
     redirectTo: '/home'
   });
