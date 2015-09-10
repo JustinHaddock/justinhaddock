@@ -17,7 +17,7 @@
 	top: 0px;
 	right: 200px;
 	white-space: nowrap;
-	opacity: 0;
+	/*opacity: 0;*/
 	-webkit-transition: all 0.3s linear 0.4s;
 	-moz-transition: all 0.3s linear 0.4s;
 	-o-transition: all 0.3s linear 0.4s;
@@ -35,7 +35,7 @@
 	padding-top: 80px;
 	margin: 0 5%;
 	width: 90%;
-	opacity: 0;
+	/*opacity: 0;*/
 	-webkit-transition: left 0.4s linear, opacity 0.4s linear;
 	-moz-transition: left 0.4s linear, opacity 0.4s linear;
 	-o-transition: left 0.4s linear, opacity 0.4s linear;
@@ -61,7 +61,7 @@
 	outline: none;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 	background: #fff url(../images/1.jpg) no-repeat center center;
-	-webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; 
+	-webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;
 	background-clip: padding-box;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -148,7 +148,7 @@
 }
 .cn-content{
 	background: #80B8CE url(../images/1.jpg) no-repeat center center;
-	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; 
+	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
 	text-align: left;
 	padding: 20px 20px 5px;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -157,7 +157,7 @@
 	cursor: pointer;
 }
 .cn-content:active p{
-	opacity: 0;
+	/*opacity: 0;*/
 }
 .cn-content p{
 	line-height: 24px;
@@ -190,7 +190,7 @@
 	top: 22px;
 	left: -100px;
 	cursor: pointer;
-	opacity: 0;
+	/*opacity: 0;*/
 	-webkit-transition: all 0.4s ease-in-out 0.5s;
 	-moz-transition: all 0.4s ease-in-out 0.5s;
 	-o-transition: all 0.4s ease-in-out 0.5s;
