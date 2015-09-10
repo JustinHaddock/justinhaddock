@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
-var minifyCss = require('gulp-minify-css');
 var concatCss = require('gulp-concat-css');
+var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
 gulp.task('default', ['compress'], function() {
@@ -21,6 +21,6 @@ gulp.task('default', ['compress'], function() {
 
 gulp.task('compress', function() {
   return gulp.src('js/*.js')
-    .pipe(uglify())   
+    .pipe(uglify())
     .pipe(gulp.dest('out/'));
 });
