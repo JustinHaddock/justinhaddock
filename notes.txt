@@ -1,0 +1,11 @@
+notes:
+
+have images be initially greyed out, turn into color when hovered
+
+slide-main{
+  main page
+}
+
+slide-1{
+
+}

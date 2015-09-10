@@ -1,6 +1,5 @@
 var myApp = angular.module('mySite', [
-	'ngRoute',
-	'psychController'
+	'ngRoute'
 ])
 
 
@@ -11,6 +10,6 @@ myApp.config(['$routeProvider', function($routeProvider) {
     controller: 'HomeController as home'
   }).
   otherwise({
-    redirectTo: '/home'
+    redirectTo: '/slide-1'
   });
 }]);
