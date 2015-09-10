@@ -21,6 +21,6 @@ gulp.task('default', ['compress'], function() {
 
 gulp.task('compress', function() {
   return gulp.src('js/*.js')
-    .pipe(uglify())
+    .pipe(uglify())   
     .pipe(gulp.dest('out/'));
 });
