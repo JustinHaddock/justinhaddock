@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mySite">
+
+  <head>
+      <title>Justin's Website!</title>
+      <meta name="author" content="Justin Haddock" />
+      <script src="lib/angular/angular.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/style1.css" />
+      <script src="js/app.js"></script>
+      <script src="js/controllers.js"></script>
+  </head>
+
+  <body>
+      <div class="container">
+          <!--/ Codrops top bar -->
+          <header>
+              <h1>Justin <span>Haddock</span></h1>
+              <h2>It's Thursday.</h2>
+          </header>
+          <section class="cn-container">
+              <div class="main" ui-view></div>
+          </section>
+      </div>
+  </body>
+</html>
