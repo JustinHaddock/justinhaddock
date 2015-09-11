@@ -15,7 +15,7 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
       controller: "l2Controller as cont",
       resolve: {
         promiseObj:  function($http){
-          return $http({method: 'GET', url: '/../assets/l2data.json'});
+          return $http({method: 'GET', url: '/../l2data.json'});
         }
       },
       templateUrl: "partials/l1.html"
@@ -25,7 +25,7 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
       controller: "l3Controller as cont",
       resolve: {
         promiseObj:  function($http){
-          return $http({method: 'GET', url: '/../assets/l3data.json'});
+          return $http({method: 'GET', url: '/../l3data.json'});
         }
       },
       templateUrl: "partials/l2.html"
