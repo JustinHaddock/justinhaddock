@@ -59,7 +59,20 @@
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	animation: fadein 2s;
+	-webkit-animation: fadein 2s;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .cn-slide nav a:hover{
 	box-shadow: 1px 3px 7px rgba(0,0,0,0.25);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);

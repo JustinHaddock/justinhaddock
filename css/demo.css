@@ -85,12 +85,12 @@ a{
 	line-height: 35px;
 	position: relative;
 	font-weight: 400;
-	color: #923e5f;
+	color: #1C1A6D;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     padding: 0px 0px 5px 0px;
 }
 .container > header h1 span{
-	color: #582036;
+	color: #40459A;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
 }
 .container > header h2{
