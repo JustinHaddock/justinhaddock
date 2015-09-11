@@ -17,7 +17,7 @@ var paths = {
         assets: ['assets/**/*'],
         index: 'index.html',
         partials: 'partials/*.html',
-        app: 'app/*'
+        app: 'app/**/*'
     },
     dest: {
         js: 'index.js',
