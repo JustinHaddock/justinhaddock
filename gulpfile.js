@@ -8,14 +8,16 @@ var uglify           = require('gulp-uglify');
 var mainBowerFiles   = require('main-bower-files');
 var streamqueue      = require('streamqueue');
 var concat           = require('gulp-concat');
+var ghPages          = require('gulp-gh-pages');
 
 var paths = {
     src: {
         js: ['js/**/*.js'],
-        css: ['css/**/*.css'],
+        css: ['css/*.css'],
         assets: ['assets/**/*'],
         index: 'index.html',
-        partials: 'partials/*.html'
+        partials: 'partials/*.html',
+        app: 'app/*'
     },
     dest: {
         js: 'index.js',
@@ -25,14 +27,18 @@ var paths = {
         partials: 'app/partials/'
     }
 }
+gulp.task('deploy', function() {
+  return gulp.src(paths.src.app)
+    .pipe(ghPages());
+});
 
 gulp.task('css', function() {
   return gulp.src(paths.src.css)
     // CSS
     .pipe(concatCss(paths.dest.css))
-    .pipe(uncss({
-        html: ['**/*.html']
-    }))
+    // .pipe(uncss({
+    //     html: ['**/*.html', 'partials/**/*.html']
+    // }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
@@ -60,5 +66,12 @@ gulp.task('assets', function () {
   gulp.src(paths.src.partials)
     .pipe(gulp.dest(paths.dest.partials))
 })
+gulp.task('watch', function(){
+  gulp.watch(paths.src.js, ['js']);
+  gulp.watch(paths.src.index, ['assets']);
+  gulp.watch(paths.src.partials, ['assets']);
+  gulp.watch(paths.src.assets, ['assets']);
+  gulp.watch(paths.src.css, ['css']);
+});
 
-gulp.task('default', ['js', 'css', 'assets']);
+gulp.task('default', ['css', 'js', 'assets', 'watch']);
