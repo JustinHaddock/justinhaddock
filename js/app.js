@@ -18,7 +18,7 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
           return $http({method: 'GET', url: '../assets/l2data.json'});
         }
       },
-      templateUrl: "partials/l1.html"
+      templateUrl: "/partials/l1.html"
     })
       .state('l3', {
       url: "/:pNum/:cNum",
@@ -28,6 +28,6 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
           return $http({method: 'GET', url: '../assets/l3data.json'});
         }
       },
-      templateUrl: "partials/l2.html"
+      templateUrl: "/partials/l2.html"
     })
 }]);
