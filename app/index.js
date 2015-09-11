@@ -33066,7 +33066,7 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
     .state('home', {
       url: "/home",
       controller: "l1Controller as cont",
-      templateUrl: "../partials/0.html"
+      templateUrl: "../partials/l0.html"
     })
     .state('l2', {
       url: "/:pNum",
