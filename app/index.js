@@ -41328,17 +41328,17 @@ angular.module('mySite')
 .controller('l1Controller', function() {
   this.sections = [
     {
-      title: "comic books",
+      title: "Hire me",
       link: "l2({pNum: 1})",
       num: "1"
     },
     {
-      title: "programming",
+      title: "know me",
       link: "l2({pNum: 2})",
       num: "2"
     },
     {
-      title: "longboarding",
+      title: "contact me",
       link: "l2({pNum: 3})",
       num: "3"
     }
