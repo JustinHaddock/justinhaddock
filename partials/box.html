@@ -1,1 +1,6 @@
-<a class='box' style='background-image: url(assets/images/{{box.num}}.jpg);' ui-sref={{box.link}}>{{box.title}}</a>
+<span ng-if="box.hasXlink()">
+  <a href={{box.xlink}} class='box' style='background-image: url(assets/images/{{box.num}}.jpg);'>{{box.title}}</a>
+</span>
+<span ng-if="!box.hasXlink()">
+  <a ui-sref={{box.link}} class='box' style='background-image: url(assets/images/{{box.num}}.jpg);'>{{box.title}}</a>
+</span>

@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/JustinHaddock/justinhaddock#readme",
   "devDependencies": {
+    "angular-mocks": "^1.5.0-beta.0",
+    "chai": "^3.3.0",
+    "grunt-karma": "*",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.2.0",
@@ -26,10 +29,14 @@
     "gulp-uncss": "^1.0.3",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-firefox-launcher": "^0.1.6",
-    "karma-jasmine": "^0.3.6",
+    "karma-jasmine": "*",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "*",
     "main-bower-files": "^2.9.0",
+    "mocha": "^2.3.3",
     "streamqueue": "^1.1.1"
   }
 }

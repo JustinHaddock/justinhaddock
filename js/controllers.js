@@ -4,7 +4,7 @@ angular.module('mySite')
   this.sections = [
     {
       title: "Hire me",
-      link: "l2({pNum: 1})",
+      link: "hire",
       num: "1"
     },
     {
@@ -20,15 +20,36 @@ angular.module('mySite')
   ];
 })
 
-.controller('l2Controller', ['$stateParams', "promiseObj", function($stateParams, promiseObj) {
-  this.sections = promiseObj.data[$stateParams.pNum];
-}])
+.controller('hireController', function() {
+  this.sections = [
+      {
+          "title": "Contact Book",
+          "xlink": "http://justinhaddock.github.io/CremalabContacts",
+          "num": "4"
+      },
+      {
+          "title": "Psych Site",
+          "xlink": "justinhaddock.github.io/DevelopmentalPsychology",
+          "num": "5"
+      },
+      {
+          "title": "Intern Project",
+          "xlink": "http://justinhaddock.github.io/internproj",
+          "num": "6"
+      },
+      {
+          "title": "My Resume",
+          "link": "l3({pNum: 1, cNum:4})",
+          "num": "7"
+      }
+  ];
+})
 
 .controller('l3Controller', ['$stateParams', "promiseObj", function($stateParams, promiseObj) {
   this.pNum = $stateParams.pNum
   this.highLevel = promiseObj.data[$stateParams.pNum];
   this.sections = this.highLevel[$stateParams.cNum-1];
-  console.log(this.sections)
+
   this.paras = this.sections["paras"];
   this.title = this.sections["title"];
 }])
@@ -38,8 +59,15 @@ angular.module('mySite')
     var Controller;
 
     Controller = function() {
-      var j = this.boxTitle;
-      //use j
+      this.hasXlink = function(){
+        console.log(this.title);
+        console.log(this.xlink);
+        console.log(this.link);
+        if (this.xlink == undefined){
+          return false
+        }
+        return true
+      }
     };
 
     return {
@@ -50,7 +78,8 @@ angular.module('mySite')
         bindToController: {
           title: "=boxTitle",
           num: "=boxNum",
-          link: "=boxLink"
+          link: "=boxLink",
+          xlink: "=boxXlink"
         },
         templateUrl: "partials/box.html"
     }

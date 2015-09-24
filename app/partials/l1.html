@@ -1,7 +1,10 @@
 <div class="cn-slide cn-slide-sub animated fadeIn" id="slide-1">
-    <h2>Favorite Superheros</h2>
+    <h2>Hire Me</h2>
     <a ui-sref="home" class="cn-back">Back</a>
     <nav>
-      <box ng-repeat="section in cont.sections" box-title="section.title" box-num="section.num" box-link="section.link"></box>
+      <box box-title="section[0].title" box-num="section[0].num" box-link="section[0].link"></box>
+      <box box-title="section[1].title" box-num="section[1].num" box-link="section[1].link"></box>
+      <box box-title="section[2].title" box-num="section[2].num" box-link="section[2].link"></box>
+      <box box-title="section[3].title" box-num="section[3].num" box-link="section[3].link"></box>
     </nav>
 </div>
