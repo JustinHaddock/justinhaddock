@@ -39,7 +39,7 @@ angular.module('mySite')
       },
       {
           "title": "My Resume",
-          "link": "l3({pNum: 1, cNum:4})",
+          "xlink": "assets/resume.pdf",
           "num": "7"
       }
   ];
@@ -60,6 +60,7 @@ angular.module('mySite')
 
     Controller = function() {
       this.hasXlink = function(){
+        console.log(this.xlink);
         if (this.xlink == undefined){
           return false
         }
