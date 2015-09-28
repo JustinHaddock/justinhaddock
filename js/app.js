@@ -15,6 +15,14 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
       controller: "hireController as cont",
       templateUrl: "partials/hire.html"
     })
+    .state('know', {
+      url: "/know",
+      templateUrl: "partials/know.html"
+    })
+    .state('contact', {
+      url: "/contact",
+      templateUrl: "partials/contact.html"
+    })
     .state('l3', {
       url: "/:pNum/:cNum",
       controller: "l3Controller as cont",

@@ -41306,6 +41306,14 @@ angular.module("mySite").config(['$urlRouterProvider','$stateProvider', function
       controller: "hireController as cont",
       templateUrl: "partials/hire.html"
     })
+    .state('know', {
+      url: "/know",
+      templateUrl: "partials/know.html"
+    })
+    .state('contact', {
+      url: "/contact",
+      templateUrl: "partials/contact.html"
+    })
     .state('l3', {
       url: "/:pNum/:cNum",
       controller: "l3Controller as cont",
@@ -41323,18 +41331,18 @@ angular.module('mySite')
 .controller('l1Controller', function() {
   this.sections = [
     {
-      title: "Hire me",
+      title: "My Work",
       link: "hire",
       num: "1"
     },
     {
       title: "know me",
-      link: "l2({pNum: 2})",
+      link: "know",
       num: "2"
     },
     {
       title: "contact me",
-      link: "l2({pNum: 3})",
+      link: "contact",
       num: "3"
     }
   ];
@@ -41349,7 +41357,7 @@ angular.module('mySite')
       },
       {
           "title": "Psych Site",
-          "xlink": "justinhaddock.github.io/DevelopmentalPsychology",
+          "xlink": "http://justinhaddock.github.io/DevelopmentalPsychology",
           "num": "5"
       },
       {
@@ -41380,9 +41388,6 @@ angular.module('mySite')
 
     Controller = function() {
       this.hasXlink = function(){
-        console.log(this.title);
-        console.log(this.xlink);
-        console.log(this.link);
         if (this.xlink == undefined){
           return false
         }
